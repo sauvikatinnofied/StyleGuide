@@ -1,4 +1,5 @@
 <a href="http://innofied.com"><img alt="Innofied" src="https://raw.githubusercontent.com/sauvikatinnofied/StyleGuide/master/Innofied-Only-Logo-White-Blue-100h.png" height=60 style="background-color:black;"/></a>
+
 # Swift Style Guide
 
 This style guide is a product of our iOS team's more than a year writing, reviewing, and testing Swift code. It reflects the coding rules we have observed as "efficient" in our production apps.
@@ -51,7 +52,7 @@ That said, this is a live document. As our app grows, our team improves, and Swi
 
 #### Trailing semicolons (`;`) are not allowed.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 self.backgroundColor = UIColor.whiteColor()
@@ -83,7 +84,7 @@ Set Xcode's **Text Editing** settings as shown:
 
 #### All source files should end with a single trailing newline (only).
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 class Button {
@@ -114,7 +115,7 @@ class Button {
 
 #### All functions should be at least one empty line apart each other.
 <table>
-<tr><th>OK</th></tr>
+<tr><th>Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 class BaseViewController: UIViewController {
@@ -137,7 +138,7 @@ class BaseViewController: UIViewController {
 
 #### Use single spaces around operator definitions and operator calls.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 func <| (lhs: Int, rhs: Int) -> Int {
@@ -161,7 +162,7 @@ let value = 1<|2
 
 #### Use single spaces around return arrows (`->`) both in functions and in closures.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 func doSomething(value: Int) -> Int {
@@ -183,7 +184,7 @@ func doSomething(value: Int)->Int {
 
 #### Commas (`,`) should have no whitespace before it, and should have either one space or one newline after.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 let array = [1, 2, 3]
@@ -218,7 +219,7 @@ self.presentViewController(
 
 #### Colons (`:`) used to indicate type should have one space after it and should have no whitespace before it.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 func createItem(item: Item)
@@ -246,7 +247,7 @@ var item : Item? = nil
 
 #### Colons (`:`) for `case` statements should have no whitespace before it, and should have either one space or one newline after it.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 switch result {
@@ -277,7 +278,7 @@ case .Failure:self.reportError()
 
 #### Open braces (`{`) should be one space following the previous non-whitespace character.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 class Icon {
@@ -309,7 +310,7 @@ let block ={ () -> Void in
 
 #### Open braces (`{`) for type declarations, functions, and closures should be followed by one empty line. Single-statement closures can be written in one line.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 class Icon {
@@ -349,7 +350,7 @@ class Icon {
 
 #### Empty declarations should be written in empty braces (`{}`), otherwise a comment should indicate the reason for the empty implementation.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 extension Icon: Equatable {}
@@ -388,7 +389,7 @@ override func drawRect(rect: CGRect) {
 
 #### Close braces (`}`) should not have empty lines before it. For single line expressions enclosed in braces, there should be one space between the last statement and the closing brace.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 class Button {
@@ -422,7 +423,7 @@ class Button {
 
 #### Close braces (`}`) unless on the same line as its corresponding open brace (`{`), should be left-aligned with the statement that declared the open brace.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 lazy var largeImage: UIImage = { () -> UIImage in
@@ -449,7 +450,7 @@ lazy var largeImage: UIImage = { () -> UIImage in
 #### The `get` and `set` statement and their close braces (`}`) should all be left-aligned. If the statement in the braces can be expressed in a single line, the `get` and `set` declaration can be inlined.
 The [rules on braces](#braces) apply.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 struct Rectangle {
@@ -519,7 +520,7 @@ struct Rectangle {
 
 #### Read-only computed properties should ommit the `get` clause.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 struct Rectangle {
@@ -555,7 +556,7 @@ struct Rectangle {
 #### `if`, `else`, `switch`, `do`, `catch`, `repeat`, `guard`, `for`, `while`, and `defer` statements should be left-aligned with their respective close braces (`}`).
 The [rules on braces](#braces) apply.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 if array.isEmpty {
@@ -594,7 +595,7 @@ else
 #### `case` statements should be left-aligned with the `switch` statement. Single-line `case` statements can be inlined and written compact. Multi-line `case` statements should be indented below `case:` and separated with one empty line.
 The [rules on braces](#braces) apply.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 switch result {
@@ -641,7 +642,7 @@ switch result {
 
 #### Conditions for `if`, `switch`, `for`, and `while` statements should not be enclosed in parentheses (`()`).
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 if array.isEmpty {
@@ -661,7 +662,7 @@ if (array.isEmpty) {
 
 #### Try to avoid nesting statements by `return`ing early when possible.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 guard let strongSelf = self else {
@@ -691,7 +692,7 @@ Naming rules are mostly based on Apple's naming conventions, since we'll end up 
 
 #### Type names (`class`, `struct`, `enum`, `protocol`) should be in *UpperCamelCase*. 
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 class ImageButton {
@@ -717,7 +718,7 @@ class image_button {
 
 #### `enum` values and `OptionSetType` values should be in *UpperCamelCase*. 
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 enum ErrorCode {
@@ -761,7 +762,7 @@ struct CacheOptions : OptionSetType {
 
 #### Variables and functions should be in *lowerCamelCase*, including statics and constants. An exception is acronyms, which should be *UPPERCASE*.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 var webView: UIWebView?
@@ -789,7 +790,7 @@ func DidTapReloadButton() {
 
 #### Avoid single-character names for types, variables, and functions. The only place they are allowed is as indexes in iterators.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 for (i, value) in array.enumerate() {
@@ -809,7 +810,7 @@ for (i, v) in array.enumerate() {
 
 #### Avoid abbreviations as much as possible. (although [some](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/APIAbbreviations.html#//apple_ref/doc/uid/20001285-BCIHCGAE) are allowed such as `min`/`max`)
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 let errorCode = error.code
@@ -825,7 +826,7 @@ let err = error.code
 
 #### Choose a name that communicates as much information about what it is and *what it's for*.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 class Article {
@@ -858,7 +859,7 @@ class NewsArticle {
 
 #### When pertaining to URLs, distinguish strings from actual `NSURL`s by appending the suffix `~String`.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 var requestURL: NSURL
@@ -892,7 +893,7 @@ func loadURL(URL: String) {
 
 #### Do not pertain to constructs (`class`, `struct`, `enum`, `protocol`, etc.) in their names.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 class User {
@@ -932,7 +933,7 @@ protocol QueryableProtocol {
 
 #### `import` statements for OS frameworks and external frameworks should be separated and alphabetized.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 import Foundation
@@ -960,7 +961,7 @@ import Cartography
 
 #### All type declarations such as `class`, `struct`, `enum`, `extension`, and `protocol`s, should be marked with `// MARK: - <name of declaration>` (with hyphen)
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 // MARK: - Icon
@@ -1002,7 +1003,7 @@ class Icon {
 
 #### All properties and methods should be grouped into the superclass/protocol they implement and should be tagged with `// MARK: <superclass/protocol name>`. The rest should be marked as either `// MARK: Public`, `// MARK: Internal`, or `// MARK: Private`.
 <table>
-<tr><th>OK</th></tr>
+<tr><th>Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 // MARK: - BaseViewController
@@ -1046,7 +1047,7 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
 
 #### All `// MARK:` tags should have two empty lines above and  one empty line below.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 import UIKit
@@ -1143,7 +1144,7 @@ In general, **all Xcode warnings should not be ignored**. These include things l
 
 #### Comments should be answering some form of "why?" question. Anything else should be explainable by the code itself, or not written at all.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 let leftMargin: CGFloat = 20
@@ -1176,7 +1177,7 @@ view.frame.x = 20 // left margin
 
 #### All temporary, unlocalized strings should be marked with `// TODO: localize`
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 self.titleLabel.text = "Date Today:" // TODO: localize
@@ -1195,7 +1196,7 @@ self.titleLabel.text = "Date Today:"
 
 #### All Objective-C `protocol` implementations, whether properties or methods, should be prefixed with `@objc dynamic`
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 @objc dynamic func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -1215,7 +1216,7 @@ func scrollViewDidScroll(scrollView: UIScrollView) {
 
 #### All `IBAction`s and `IBOutlet`s should be declared `dynamic`
 <table>
-<tr><th>OK</th></tr>
+<tr><th>Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 @IBOutlet private dynamic weak var closeButton: UIButton?
@@ -1232,7 +1233,7 @@ func scrollViewDidScroll(scrollView: UIScrollView) {
 
 #### All properties used for KVC/KVO and all functions used as `Selector`s should be marked `dynamic`
 <table>
-<tr><th>OK</th></tr>
+<tr><th>Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 override func viewDidLoad() {
@@ -1254,7 +1255,7 @@ private dynamic func tapGestureRecognized(sender: UITapGestureRecognizer) {
 
 #### All `@IBOutlet`s should be declared `weak`. They should also be wrapped as `Optional`, not `ImplicitlyUnwrappedOptional`.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 @IBOutlet dynamic weak var profileIcon: UIImageView?
@@ -1279,7 +1280,7 @@ private dynamic func tapGestureRecognized(sender: UITapGestureRecognizer) {
 #### For library modules: all declarations should explicitly specify either `public`, `internal`, or `private`.
 
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 private let defaultTimeout: NSTimeInterval = 30
@@ -1303,7 +1304,7 @@ class NetworkRequest {
 #### For application modules: `public` access is prohibited unless required by a protocol. The `internal` keyword may or may not be written, but the `private` keyword is required.
 
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 private let someGlobal = "someValue"
@@ -1329,7 +1330,7 @@ public class AppDelegate {
 #### Access modifiers should be written before all other non-`@` modifiers.
 
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 @objc internal class User: NSManagedObject {
@@ -1358,7 +1359,7 @@ internal @objc class User: NSManagedObject {
 #### Unless required, a variable/property declaration's type should be inferred from either the left or right side of the statement, but not both.
 
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 var backgroundColor = UIColor.whiteColor()
@@ -1386,7 +1387,7 @@ var lineBreakMode: NSLineBreakMode = NSLineBreakMode.ByWordWrapping
 
 #### When literal types are involved (`StringLiteralConvertible`, `NilLiteralConvertible`, etc), it is encouraged to specify the type explicitly and is preferrable over casting with `as` directly.
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 var radius: CGFloat = 0
@@ -1406,7 +1407,7 @@ var length = 0 as CGFloat // prefer initializer to casts
 
 #### `.count` should only be used when the count value itself is needed
 <table>
-<tr><th>OK</th></tr>
+<tr><th>Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 let badgeNumber = unreadItems.count
@@ -1416,7 +1417,7 @@ let badgeNumber = unreadItems.count
 
 Checking if empty or not:
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 if sequence.isEmpty {
@@ -1431,7 +1432,7 @@ if sequence.count <= 0 {
 
 Getting the first or last item:
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 let first = sequence.first
@@ -1446,7 +1447,7 @@ let last = sequence[sequence.count - 1]
 
 Removing the first or last item:
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 sequence.removeFirst()
@@ -1461,7 +1462,7 @@ sequence.removeAtIndex(sequence.count - 1)
 
 Iterating all indexes:
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 for i in sequence.indices {
@@ -1478,7 +1479,7 @@ for i in 0 ..< sequence.count {
 
 Getting the first or last index:
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 let first = sequence.indices.first
@@ -1493,7 +1494,7 @@ let last = sequence.count - 1
 
 Iterating all indexes except the last `n` indexes:
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 for i in sequence.indices.dropLast(n) {
@@ -1510,7 +1511,7 @@ for i in 0 ..< (sequence.count - n) {
 
 Iterating all indexes except the first `n` indexes:
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 for i in sequence.indices.dropFirst(n) {
@@ -1539,7 +1540,7 @@ In particular, this will cover the ever-debatable usage/non-usage of `self`.
 (See next rule for implications)
 
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 self.animatableViews.forEach { view in
@@ -1562,7 +1563,7 @@ animatableViews.forEach { view in
 #### For all non-`@noescape` and non-animation closures, accessing `self` within the closure requires a `[weak self]` declaration.
 
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 self.request.downloadImage(
@@ -1591,7 +1592,7 @@ self.request.downloadImage(
 #### Never use `unowned` to capture references in closures.
 
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 self.request.downloadImage(
@@ -1620,7 +1621,7 @@ self.request.downloadImage(
 #### If the validity of the weak `self` in the closure is needed, bind using the variable `` `self` `` to shadow the original.
 
 <table>
-<tr><th>OK</th><th>NG</th></tr>
+<tr><th>Preferred</th><th>Not Preferred</th></tr>
 <tr>
 <td><pre lang=swift>
 self.request.downloadImage(
