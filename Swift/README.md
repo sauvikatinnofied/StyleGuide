@@ -1,4 +1,4 @@
-<a href="http://innofied.com"><img alt="Innofied" src="https://raw.githubusercontent.com/sauvikatinnofied/StyleGuide/master/Innofied-Only-Logo-White-Blue-100h.png" height=60 /></a>
+<a href="http://innofied.com"><img alt="Innofied" src="https://raw.githubusercontent.com/sauvikatinnofied/StyleGuide/master/Innofied-Only-Logo-White-Blue-100h.png" height=60 style="background-color:black;"/></a>
 # Swift Style Guide
 
 This style guide is a product of our iOS team's more than a year writing, reviewing, and testing Swift code. It reflects the coding rules we have observed as "efficient" in our production apps.
